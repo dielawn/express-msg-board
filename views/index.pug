@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+  
+  a(href="/new") Post Msg 
+  if messages && messages.length 
+    ul 
+      each msg in messages 
+        li 
+          p #{msg.user}          
+          p #{msg.text}
+
+    
+  else 
+    p No message to display
+  
+  

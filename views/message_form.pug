@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  a(href="/") Message Board
+  form(action="/new" method="POST")
+    hr
+    label(for="userName") User Name:  
+    input(type="text" name="userName" placeholder="User Name")
+    
+    label(for="messageTxt") Message:       
+    textarea(name="messageTxt" cols="30" rows="10")
+    hr
+    button.btn.btn-primary(type="submit") Submit
+    
